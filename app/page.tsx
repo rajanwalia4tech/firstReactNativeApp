@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, Button, Image, ScrollView } from "react-native";
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { RootStackParamList } from "./";
+import { StatusBar } from "react-native";
 const logoImg = require("../assets/images/adaptive-icon.png");
 // Define props for this screen
 type Props = NativeStackScreenProps<RootStackParamList, "Page">;
@@ -9,6 +10,8 @@ type Props = NativeStackScreenProps<RootStackParamList, "Page">;
 export default function Page({ navigation }: Props) {
   return (
     <View style={{flex:1}}>
+      {/* only works on the android */}
+      <StatusBar backgroundColor="lightgreen" barStyle="dark-content"></StatusBar>
     <ScrollView style={styles.container}>
       <Text style={styles.title}>Hello World Rajansdfsd</Text>
       <Text style={styles.subtitle}>This is the first page of your app.</Text>
